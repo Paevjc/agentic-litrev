@@ -6,6 +6,7 @@ paths:
 urls:
   temperature: "https://api-open.data.gov.sg/v2/real-time/api/air-temperature"
   psi: "https://api-open.data.gov.sg/v2/real-time/api/psi"
+  pm25: "https://api-open.data.gov.sg/v2/real-time/api/pm25"
   onemap: "https://www.onemap.gov.sg/api/common/elastic/search"
   forecast: "https://api-open.data.gov.sg/v2/real-time/api/two-hr-forecast"
 
@@ -30,3 +31,9 @@ psi_bands: # NEA PSI band -> upper bound (inclusive), checked in order
   unhealthy: 200
   very unhealthy: 300
   hazardous: .inf # YAML for infinity: everything above 300
+
+pm25_bands: # NEA 1-hr PM2.5 band -> upper bound in µg/m³ (inclusive)
+  normal: 55
+  elevated: 150
+  high: 250
+  very high: .inf
