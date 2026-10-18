@@ -1,0 +1,20 @@
+##########################
+# Dataset
+data/
+
+# pycaches
+src/__pycache__/
+__pycache__/
+
+# vscode
+.vscode
+
+# secrets
+.env
+
+# virtualenv
+.ag/
+
+# personal notes
+record.md
+psi.adk/
