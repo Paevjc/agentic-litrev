@@ -1,0 +1,32 @@
+# configuration file for paths and hyperparameters
+seed: 42
+paths:
+  load_dotenv: "c:\\Users\\jeriel\\Desktop\\Projects\\agentic-psi\\.env"
+
+urls:
+  temperature: "https://api-open.data.gov.sg/v2/real-time/api/air-temperature"
+  psi: "https://api-open.data.gov.sg/v2/real-time/api/psi"
+  onemap: "https://www.onemap.gov.sg/api/common/elastic/search"
+  forecast: "https://api-open.data.gov.sg/v2/real-time/api/two-hr-forecast"
+
+region_centres: # from the PSI API's regionMetadata (static)
+  north:   [1.41803, 103.82]
+  south:   [1.29587, 103.82]
+  east:    [1.35735, 103.94]
+  west:    [1.35735, 103.70]
+  central: [1.35735, 103.82]
+
+http:
+  user_agent: "paevjc"
+  timeout: 20 # seconds
+
+agent:
+  n_candidates: 5 # OneMap results shown to the picker
+  max_tries: 3 # report drafts: 1 first draft + up to 2 rewrites
+
+psi_bands: # NEA PSI band -> upper bound (inclusive), checked in order
+  good: 50
+  moderate: 100
+  unhealthy: 200
+  very unhealthy: 300
+  hazardous: .inf # YAML for infinity: everything above 300
