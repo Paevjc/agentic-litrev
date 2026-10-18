@@ -1,7 +1,7 @@
 # configuration file for paths and hyperparameters
 seed: 42
 paths:
-  load_dotenv: "c:\\Users\\jeriel\\Desktop\\Projects\\agentic-psi\\.env"
+  load_dotenv: "c:\\Users\\jeriel\\Desktop\\Projects\\agentic-litrev\\.env"
 
 urls:
   temperature: "https://api-open.data.gov.sg/v2/real-time/api/air-temperature"
